@@ -54,3 +54,4 @@ describe("Display state tests based on props", () => {
         expect(display.queryByText('Locked')).toBeTruthy()
         expect(display.queryByText('Open')).toBeFalsy()
     });
+})
