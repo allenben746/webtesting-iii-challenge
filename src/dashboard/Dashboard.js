@@ -14,24 +14,16 @@ class Dashboard extends React.Component {
 
     return (
       <>
-        <Display locked={locked} closed={closed} />
+        <Display locked={locked} closed={closed} data-testid="ShowControlsDisplay"/>
         <Controls
           locked={locked}
           closed={closed}
           toggleLocked={this.toggleLocked}
           toggleClosed={this.toggleClosed}
+          data-testid="ShowControlsDisplay"
         />
       </>
     );
-  }
+  }}
 
-  toggleLocked = () => {
-    this.setState(prev => ({ locked: !prev.locked }));
-  };
-
-  toggleClosed = () => {
-    this.setState(prev => ({ closed: !prev.closed }));
-  };
-}
-
-export default Dashboard;
+  export default Dashboard;
